@@ -89,3 +89,9 @@ configMap:
     DATABASE_USER: "user"
     DATABASE: "banco"
     TOKEN_KEY: "AFAFA2"
+
+secret:
+  create: true
+  name: "app-secret-vars"
+  data: 
+    DATABASE_PASSWORD: ""
