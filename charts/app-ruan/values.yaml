@@ -94,4 +94,14 @@ secret:
   create: true
   name: "app-secret-vars"
   data: 
-    DATABASE_PASSWORD: ""
+    DATABASE_PASSWORD: "senha"
+
+
+persistence:
+  enabled: true
+  type: pvc
+  annotations: {}
+  accessModes:
+    - ReadWriteOnce
+  size: 2Gi
+  storageClassName: longhorn
