@@ -5,6 +5,7 @@ metadata:
   name: {{ template "app-ruan.fullname" . }}
   labels:
     {{- include "app-ruan.labels" . | nindent 4 }}
+    actual-size: {{ .Values.persistence.size | quote }}
   {{- with .Values.persistence.annotations  }}
   annotations:
     {{ toYaml . | indent 4 }}
